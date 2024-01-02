@@ -7,7 +7,7 @@ using TMPro;
 public class MovimentoPlayer : MonoBehaviour
 {
     public TextMeshProUGUI MoedaTxt;
-    private int Moeda;
+    //private float Moeda;
     public float speed;
     public Rigidbody2D rb;
     private float direction;
@@ -17,7 +17,7 @@ public class MovimentoPlayer : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Moeda = 0;
+        //Moeda = 0;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class MovimentoPlayer : MonoBehaviour
     {
         Andar();
         Pulo();
-        MoedaTxt.text = Moeda.ToString();
+        //MoedaTxt.text = Moeda.ToString();
     }
 
     //Andar do Player
@@ -45,12 +45,12 @@ public class MovimentoPlayer : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.CompareTag("Coin"))
-        {
-            Moeda = Moeda + 1;
-            Destroy(col.gameObject);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.CompareTag("Coin"))
+    //    {
+    //        Moeda = Moeda + 1;
+    //        Destroy(col.gameObject);
+    //    }
+    //}
 }

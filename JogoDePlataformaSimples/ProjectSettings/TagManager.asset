@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Lowerground
+    uniqueID: 4022755311
+    locked: 0
+  - name: Ground
+    uniqueID: 514313845
+    locked: 0
+  - name: Upperground
+    uniqueID: 2178465101
+    locked: 0
+  - name: Foreground
+    uniqueID: 2923408313
+    locked: 0
