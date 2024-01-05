@@ -13,6 +13,8 @@ public class Menu : MonoBehaviour
     private GameObject PanelOptions;
     [SerializeField]
     private GameObject PauseGame;
+    [SerializeField]
+    private string ResetCena;
     private static Menu _Instance;
     public static Menu Instance;
 
@@ -26,7 +28,18 @@ public class Menu : MonoBehaviour
 
     public void Play()
     {
+        Time.timeScale = 1;
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.ContarPontos = 0;
+        }
         SceneManager.LoadScene(LevelName);
+    }
+
+    public void ResetScene()
+    {
+        SceneManager.LoadScene(ResetCena);
+        ScoreManager.Instance.ContarPontos = 0;
         Time.timeScale = 1;
     }
 

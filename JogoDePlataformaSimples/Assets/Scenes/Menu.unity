@@ -1121,10 +1121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc7158c9d61bda94c979ec4042056c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelName: Jogo
+  LevelName: Tutorial
   PanelMainMenu: {fileID: 786870514}
   PanelOptions: {fileID: 1545793915}
   PauseGame: {fileID: 0}
+  ResetCena: 
 --- !u!4 &918860461
 Transform:
   m_ObjectHideFlags: 0
