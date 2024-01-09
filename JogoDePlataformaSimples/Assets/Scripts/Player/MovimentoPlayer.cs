@@ -14,8 +14,7 @@ public class MovimentoPlayer : MonoBehaviour
     public float ForcaPulo;
     [SerializeField]
     private string Reset;
-    [SerializeField]
-
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
