@@ -14,11 +14,29 @@ public class PlayerAnim : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        OnMove();
+    }
+
     void OnMove()
     {
         if (player.direction > 0) 
         {
             anim.SetInteger("Transition", 1);
+        }
+        else
+        {
+            anim.SetInteger("Transition", 0);
+        }
+
+        if (player.direction > 0)
+        {
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        if (player.direction < 0)
+        {
+            transform.eulerAngles = new Vector2(0, 180);
         }
     }
 }
