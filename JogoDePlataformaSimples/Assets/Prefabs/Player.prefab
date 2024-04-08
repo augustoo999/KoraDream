@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7297730696693138147}
+  - component: {fileID: 3186695506802795000}
+  - component: {fileID: 5918687305884388973}
   - component: {fileID: 6233544971930935095}
   - component: {fileID: 6895191610664991219}
   - component: {fileID: 1528163577950810395}
-  - component: {fileID: 3186695506802795000}
   - component: {fileID: 6579168083977125269}
   m_Layer: 0
   m_Name: Player
@@ -36,6 +37,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3186695506802795000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149701749310796756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5ff7567f4095341aa0804c2317528e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoedaTxt: {fileID: 0}
+  speed: 5
+  rb: {fileID: 0}
+  ForcaPulo: 11
+  Reset: Jogo
+--- !u!114 &5918687305884388973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149701749310796756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea0191fb164f3a4992f6f2131e992b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6233544971930935095
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -160,23 +190,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3186695506802795000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3149701749310796756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5ff7567f4095341aa0804c2317528e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoedaTxt: {fileID: 0}
-  speed: 5
-  rb: {fileID: 0}
-  ForcaPulo: 14
-  Reset: Jogo
 --- !u!95 &6579168083977125269
 Animator:
   serializedVersion: 5

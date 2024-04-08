@@ -1445,7 +1445,7 @@ GameObject:
   - component: {fileID: 757268032}
   m_Layer: 0
   m_Name: Platforms
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3717,6 +3717,10 @@ PrefabInstance:
     - target: {fileID: 3149701749310796756, guid: 66417203ed0c3524db95c088503d7651, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3186695506802795000, guid: 66417203ed0c3524db95c088503d7651, type: 3}
+      propertyPath: ForcaPulo
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6233544971930935095, guid: 66417203ed0c3524db95c088503d7651, type: 3}
       propertyPath: m_Sprite

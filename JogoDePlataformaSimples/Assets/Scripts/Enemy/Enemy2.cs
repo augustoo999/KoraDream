@@ -6,7 +6,7 @@ public class Enemy2 : MonoBehaviour
 {
     public float speed;
     public float distance;
-    bool isRight = true;
+    private bool isRight = true;
     public Transform groundCheck;
     public LayerMask layer;
     [SerializeField]

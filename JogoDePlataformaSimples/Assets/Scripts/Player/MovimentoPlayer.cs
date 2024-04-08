@@ -10,11 +10,17 @@ public class MovimentoPlayer : MonoBehaviour
     public float speed;
     private bool isGround = true;
     public Rigidbody2D rb;
-    private float direction;
+    private float _direction;
     public float ForcaPulo;
     [SerializeField]
     private string Reset;
-    
+
+    public float direction
+    {
+        get { return _direction; }
+        set { _direction = value; }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,15 +28,27 @@ public class MovimentoPlayer : MonoBehaviour
 
     void Update()
     {
-        Andar();
+        OnInput();
         Pulo();
+    }
+
+    private void FixedUpdate()
+    {
+        Andar();
+
+    }
+
+    #region Movement
+
+    void OnInput()
+    {
+      
     }
 
     public void Andar()
     {
         direction = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(direction * speed, rb.velocity.y);
-
     }
 
     public void Pulo()
@@ -56,4 +74,7 @@ public class MovimentoPlayer : MonoBehaviour
             isGround = false;
         }
     }
+
+    #endregion
+
 }
