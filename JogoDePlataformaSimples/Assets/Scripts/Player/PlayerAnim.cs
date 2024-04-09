@@ -24,19 +24,21 @@ public class PlayerAnim : MonoBehaviour
         if (player.direction > 0) 
         {
             anim.SetInteger("Transition", 1);
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        else if (player.direction < 0)
+        {
+            anim.SetInteger("Transition", 1);
+            transform.eulerAngles = new Vector2(0, 180);
         }
         else
         {
             anim.SetInteger("Transition", 0);
         }
 
-        if (player.direction > 0)
+        if (player.IsJumping)
         {
-            transform.eulerAngles = new Vector2(0, 0);
-        }
-        if (player.direction < 0)
-        {
-            transform.eulerAngles = new Vector2(0, 180);
+            anim.SetInteger("Transition", 2);
         }
     }
 }

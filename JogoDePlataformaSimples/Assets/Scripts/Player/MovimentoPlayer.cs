@@ -12,6 +12,7 @@ public class MovimentoPlayer : MonoBehaviour
     public Rigidbody2D rb;
     private float _direction;
     public float ForcaPulo;
+    private bool _IsJumping;
     [SerializeField]
     private string Reset;
 
@@ -19,6 +20,12 @@ public class MovimentoPlayer : MonoBehaviour
     {
         get { return _direction; }
         set { _direction = value; }
+    }
+
+    public bool IsJumping 
+    {
+        get { return _IsJumping; }
+        set { _IsJumping = value; }
     }
 
     void Start()
@@ -35,7 +42,6 @@ public class MovimentoPlayer : MonoBehaviour
     private void FixedUpdate()
     {
         Andar();
-
     }
 
     #region Movement
@@ -56,6 +62,7 @@ public class MovimentoPlayer : MonoBehaviour
         if (isGround && Input.GetButtonDown("Jump"))
         {
             rb.velocity = Vector2.up * ForcaPulo;
+            
         }
     }
 
@@ -64,6 +71,7 @@ public class MovimentoPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGround = true;
+            _IsJumping = false;
         }
 
     }
@@ -72,6 +80,7 @@ public class MovimentoPlayer : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGround = false;
+            _IsJumping = true;
         }
     }
 
