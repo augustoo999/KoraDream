@@ -30,27 +30,22 @@ public class Enemy2 : MonoBehaviour
 
     void Check()
     {
-        // Lança um raio para a direita
-        RaycastHit2D direita = Physics2D.Raycast(transform.position, Vector2.right, distance, layer);
-        Debug.Log("Raycast Direita Detectado");
-        // Lança um raio para a esquerda
-        RaycastHit2D esquerda = Physics2D.Raycast(transform.position, Vector2.left, distance, layer);
-        Debug.Log("Raycast Esquerdo Detectado");
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        // Verifica se houve colisão com a direita
-        if (direita.collider == true)
-        {
-            Debug.Log("Collider à direita");
-            isRight = true;
-            transform.eulerAngles = new Vector3(0, 0, 0);
-        }
+        RaycastHit2D wall = Physics2D.Raycast(groundCheck.position, Vector2.left, distance);
 
-        // Verifica se houve colisão com a esquerda
-        else if (esquerda.collider == true)
+        if (wall.collider == false)
         {
-            Debug.Log("Collider à esquerda");
-            transform.eulerAngles = new Vector3(0, 180, 0);
-            isRight = false;
+            if (isRight == true)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0);
+                isRight = false;
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                isRight = true;
+            }
         }
     }
 
